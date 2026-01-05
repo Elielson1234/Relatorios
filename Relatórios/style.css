@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #ffffff00;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background: #062c43;
+    color: white;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.user {
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+nav a:hover,
+nav a.active {
+    background: #054569;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+.header {
+    background-color: #f3f4f6;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h1 {
+    margin-left: 10px; 
+     color: #002f49;
+    font-size: 30px;
+}
+
+
+.actions input {
+    padding: 8px;
+    margin-right: 50px;
+    border-radius: 10px;
+    border: none;
+}
+
+.actions button {
+    padding: 8px 14px;
+    background: #062c43;
+    color: white;
+    margin-right: 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/* .maizinho{
+    margin-right: 20px;
+    margin-top: 2px;
+} */
+
+.filters {
+    margin: 20px 0;
+}
+
+.filters button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.filters .active {
+    background: #062c43;
+    color: white;
+}
+
+.table-box {
+    margin-left: -30px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.count {
+    display: inline-block;
+    margin-bottom: 10px;
+    background: #062c43;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+/* opções */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: flex-start;   /* 👈 muda aqui */
+    padding-top: 20px;        /* 👈 controla a altura */
+}
+
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal-content button {
+    margin: 5px;
+    padding: 8px 14px;
+    cursor: pointer;
+}
+
+.modal-content .cancel {
+    background: #ccc;
+}

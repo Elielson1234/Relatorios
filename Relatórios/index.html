@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatórios - ACIB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+            <h2 class="logo">acib</h2>
+
+            <div class="user">
+                <strong>Stefan Salvatore</strong><br>
+                <span>Perfil: administrador</span>
+            </div>
+
+            <nav>
+                <a href="#">Início</a>
+                <a href="#">Controle</a>
+                <a href="#">Financeiro</a>
+                <a href="#" class="active">Relatórios</h1></a>
+                <a href="#">Notificações</a>
+                <a href="#">Sair</a>
+            </nav>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="content">
+            <!-- CABEÇALHO -->
+            <header class="header">
+                <h1>Relatórios</h1>
+
+                <div class="actions">
+                    <input type="text" placeholder="Buscar relatório">
+                 
+                    <button> <!--  <img src="imagem/maizinho.png" width="15" height="15" class="maizinho" >-->Novo relatório</button>
+                </div>
+            </header>
+
+            <!-- FILTROS -->
+            <div class="filters">
+                <button data-category="all"  class="active">Todos</button>
+                <button  data-category="mensal" >Mensais</button>
+                <button data-category="semanal">Semanais</button>
+                <button data-category="anual">Anuais</button>
+            </div>
+
+            <!-- TABELA -->
+            <section class="table-box">
+                <span class="count"></span>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tipo</th>
+                            <th>Data de geração</th>
+                            <th>Usuário</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="reportTable">
+                        <!-- Dados via JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+   <!--  opções -->
+    <div id="categoryModal" class="modal">
+  <div class="modal-content">
+    <h3>Escolha a categoria</h3>
+
+    <button onclick="selectCategory('mensal')">Mensal</button>
+    <button onclick="selectCategory('semanal')">Semanal</button>
+    <button onclick="selectCategory('anual')">Anual</button>
+
+    <br><br>
+
+    <input
+      type="file"
+      id="fileInput"
+      accept=".pdf,.doc,.docx,.xls,.xlsx"
+    >
+
+    <br><br>
+
+    <button class="cancel" onclick="closeModal()">Cancelar</button>
+  </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
